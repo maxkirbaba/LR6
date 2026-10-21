@@ -73,3 +73,26 @@ python3 -c 'import json; d=json.load(open("github-api.json")); print("Репоз
 git branch --show-current
 git --no-pager log --all --format='%h | %ad | %an | %s' --date=short
 cp ../09.png screenshots/
+nano README.md
+git diff --check
+git add README.md commands.log github-api.json screenshots/09.png
+git commit -m "Добавлены запрос к GitHub API и журнал команд"
+git status
+git --no-pager log --all --format='%h | %ad | %an | %s' --date=short > history.txt
+printf '\n## Форматированная история\n\nИстория перед коммитом, добавляющим этот раздел.\n\n```text\n' >> README.md
+cat history.txt >> README.md
+printf '\n```\n' >> README.md
+git diff --check
+git add README.md history.txt
+git commit -m "Добавлена форматированная история в отчёт"
+git push -u origin master report
+ls -al ~/.ssh
+ssh -T git@github.com
+ssh -T -p 443 git@ssh.github.com
+git remote set-url origin ssh://git@ssh.github.com:443/maxkirbaba/LR6.git
+git remote -v
+git push -u origin master report
+git push origin --delete branch1
+git status -sb
+git rev-parse master report
+git ls-remote --heads origin
