@@ -39,3 +39,22 @@ GitHub: https://github.com/maxkirbaba/LR6
 
 Создана отдельная ветка report.
 Отчёт оформляется в README.md с использованием Markdown.
+## Скриншоты выполнения
+
+![Создание fork](screenshots/01.png)
+
+![Проверка Git и настроек](screenshots/02.png)
+
+![Файл, добавленный через GitHub](screenshots/03.png)
+
+![Получение изменений с GitHub](screenshots/04.png)
+
+![История веток и последние изменения](screenshots/05.png)
+
+![Конфликт слияния](screenshots/06.png)
+
+![Разрешение конфликта и удаление ветки](screenshots/07.png)
+
+![Создание трёх коммитов](screenshots/08a.png)
+
+![Отмена последнего коммита](screenshots/08b.png)
