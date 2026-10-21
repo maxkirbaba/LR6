@@ -1,0 +1,75 @@
+git clone https://github.com/maxkirbaba/LR6.git
+cd LR6
+git config user.name "4514_Кирбаба_М_Д"
+git config user.email "makkir7@gmail.com"
+git config core.quotePath false
+git config --get user.name
+git config --get user.email
+git remote -v
+git branch -a
+git status
+git config --get user.name
+git config --get user.email
+git remote -v
+git branch -a
+fg
+git --no-pager branch -a
+git --version
+git config --get user.name
+git config --get user.email
+git remote -v
+git --no-pager branch -a
+git status
+git pull --ff-only origin master
+cat web-note.txt
+git --no-pager log -1 --format=fuller
+git status
+git branch --track branch1 origin/branch1
+git --no-pager log master --oneline
+git --no-pager log branch1 --oneline
+git --no-pager show master
+git --no-pager show branch1
+git merge branch1
+git status
+cat mergefile.txt
+nano mergefile.txt
+cat mergefile.txt
+git diff --check
+git add mergefile.txt
+git commit -m "Слияние branch1 в master с ручным разрешением конфликта"
+fg
+git config core.pager cat
+git show --check HEAD
+git branch -d branch1
+git log --graph --oneline --all
+git status
+printf 'Лабораторная работа №6\nИзучены история и слияние веток.\n' > practice.txt
+git add practice.txt
+git commit -m "Добавлены заметки о выполнении лабораторной"
+printf 'Конфликт в mergefile.txt разрешён вручную.\n' >> practice.txt
+git add practice.txt
+git commit -m "Дополнены заметки о разрешении конфликта"
+printf 'Временная строка для демонстрации отмены коммита.\n' >> practice.txt
+git add practice.txt
+git commit -m "Добавлена временная строка для демонстрации отката"
+git revert --no-edit HEAD
+cat practice.txt
+git log -4 --oneline
+git diff HEAD~2 HEAD -- practice.txt
+git status
+git switch -c report
+nano README.md
+git add README.md
+git commit -m "Оформлены цель и основные этапы отчёта в README"
+mkdir -p screenshots
+cp ../0*.png screenshots/
+nano README.md
+git add README.md screenshots
+git commit -m "Добавлены скриншоты выполнения лабораторной"
+git status
+git log -2 --oneline
+curl --fail --location --silent --show-error https://api.github.com/repos/maxkirbaba/LR6 --output github-api.json
+python3 -c 'import json; d=json.load(open("github-api.json")); print("Репозиторий:", d["full_name"]); print("Fork:", d["fork"]); print("Исходный репозиторий:", d["parent"]["full_name"]); print("Основная ветка:", d["default_branch"])'
+git branch --show-current
+git --no-pager log --all --format='%h | %ad | %an | %s' --date=short
+cp ../09.png screenshots/
